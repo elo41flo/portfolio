@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon parcours</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h2>Portfolio<br>Eloise Robert</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="monparcours.html">Mon Parcours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="animation-display">
+        <div class="cyber-space">
+            <!-- Lignes animées -->
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+
+            <!-- Formes géométriques -->
+            <div class="circle circle-1"></div>
+            <div class="square square-1"></div>
+            <div class="triangle triangle-1"></div>
+
+            <!-- Particules lumineuses -->
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+
+            <!-- Fond dynamique -->
+            <div class="background"></div>
+        </div>
+    </main>
+
+    <section id="parcours">
+        <h2>Mon Parcours</h2>
+        <p>Passionné par le développement web, j'ai commencé mon apprentissage en autodidacte en 2023. Depuis, je n'ai cessé d'apprendre et d'expérimenter.</p>
+        <div class="timeline">
+            <div class="event">
+                <div class="date">2023</div>
+                <div class="content">Découverte du développement web et apprentissage autodidacte.</div>
+            </div>
+            <div class="event">
+                <div class="date">2024</div>
+                <div class="content">Réalisation de sites vitrines, portfolios et e-commerce pour des amis.</div>
+            </div>
+            <div class="event">
+                <div class="date">Futur</div>
+                <div class="content">Travail sur des projets personnels comme un réseau social et un site d'entraide.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eloise Robert. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const events = document.querySelectorAll(".event");
+            events.forEach((event, index) => {
+                setTimeout(() => {
+                    event.classList.add("visible");
+                }, index * 500);
+            });
+        });
+    </script>
+</body>
+</html>

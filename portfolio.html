@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h2>Portfolio<br>Eloise Robert</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="monparcours.html">Mon Parcours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="animation-display">
+        <div class="cyber-space">
+            <!-- Lignes animées -->
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+
+            <!-- Formes géométriques -->
+            <div class="circle circle-1"></div>
+            <div class="square square-1"></div>
+            <div class="triangle triangle-1"></div>
+
+            <!-- Particules lumineuses -->
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+
+            <!-- Fond dynamique -->
+            <div class="background"></div>
+        </div>
+    </main>
+
+    <section class="portfolio">
+        <h3>Mon portfolio</h3>
+        <div class="projects-container">
+            <div class="project" onclick="openProject('projet1')">
+                <img src="img/reparfermetures.png" alt="Repar Fermetures">
+                <p>Repar Fermetures</p>
+            </div>
+            <div class="project" onclick="openProject('projet2')">
+                <img src="img/eloaimelire.png" alt="Elo aime lire">
+                <p>Elo aime lire</p>
+            </div>
+            <div class="project" onclick="openProject('projet3')">
+                <img src="img/fleurdepau.png" alt="Fleur de Pau">
+                <p>Fleur de Pau</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fenêtre modale -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProject()">&times;</span>
+        <h2 id="project-title"></h2>
+        <img id="project-image" src="" alt="Image du projet">
+        <p id="project-description"></p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Eloise Robert. Tous droits réservés.</p>
+</footer>
+
+    <script>
+        // Vérifie que le script est bien chargé
+console.log("Script chargé");
+
+// Données des projets
+const projects = {
+    projet1: {
+        title: "Repar Fermetures - Site Vitrine",
+        image: "img/reparfermetures.png",
+        description: "Un site vitrine conçu pour Antonio, dirigeant de Repar Fermetures du 41."
+    },
+    projet2: {
+        title: "Elo aime lire - Blog",
+        image: "img/eloaimelire.png",
+        description: "Un petit blog de lecture pour moi-même."
+    },
+    projet3: {
+        title: "Fleur de Pau - Site e-commerce",
+        image: "img/fleurdepau.png",
+        description: "Site e-commerce pour une entreprise indépendante, pour des créations artisanales."
+    }
+};
+
+// Fonction pour ouvrir la modale avec les infos du projet
+function openProject(projectId) {
+    console.log("Ouverture du projet :", projectId); // Debug
+
+    const modal = document.getElementById("modal");
+    const project = projects[projectId];
+
+    if (!project) {
+        console.error("Projet non trouvé:", projectId);
+        return;
+    }
+
+    // Vérifie si l'élément 'project-title' existe
+    const titleElement = document.getElementById("project-title");
+    const imageElement = document.getElementById("project-image");
+    const descriptionElement = document.getElementById("project-description");
+
+    if (!titleElement || !imageElement || !descriptionElement) {
+        console.error("Éléments de la modale introuvables !");
+        return;
+    }
+
+    titleElement.innerText = project.title;
+    imageElement.src = project.image;
+    descriptionElement.innerText = project.description;
+
+    modal.style.display = "flex";
+}
+
+// Fermer la modale
+function closeProject() {
+    console.log("Fermeture de la modale"); // Debug
+    document.getElementById("modal").style.display = "none";
+}
+
+// Fermer la modale en cliquant en dehors du contenu
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+        closeProject();
+    }
+});
+
+    </script>
+</body>
+</html>
