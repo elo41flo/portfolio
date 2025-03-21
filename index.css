@@ -1,0 +1,396 @@
+/* Style global */
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: aliceblue;
+    color: white;
+    height: 100%;
+    overflow-x: hidden;  /* Empêche le défilement horizontal */
+    overflow-y: scroll;  /* Permet le défilement vertical */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.emblema-one-regular {
+    font-family: "Emblema One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Contenu du header */
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #727171;
+}
+
+h3 {
+    color: black;
+    font-family: 'Emblema One', sans-serif;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-family: 'Emblema One', sans-serif;
+    text-align: center;
+}
+
+/* Texte principal */
+h1 {
+    color: rgb(0, 0, 0);
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+
+.mon-paragraphe {
+    color: rgb(0, 0, 0) !important;
+}
+
+p {
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    text-align: center;
+}
+
+h1, p {
+    position: relative;
+    z-index: 10;  /* Assurez-vous que le texte est toujours au-dessus de l'animation */
+}
+
+/* Images de compétences */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-img {
+    width: 80px;
+    height: auto;
+}
+
+/* Portfolio */
+.projects-container {
+    display: flex;
+    justify-content: space-between; /* Répartir l'espace entre les projets */
+    gap: 2rem; /* Espace entre chaque projet */
+    margin-top: 20px;
+    width: 100%; /* S'assurer que le conteneur prend toute la largeur */
+}
+
+.project {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    flex: 1; /* Chaque projet prendra une largeur équivalente */
+    max-width: 300px; /* Largeur maximale pour éviter que l'image devienne trop grande */
+    text-align: center; /* Centrer le texte sous l'image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover {
+    transform: scale(1.1);
+}
+
+/* Fenêtre modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    color: black;
+}
+
+.modal img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.contact h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 900px;
+    margin: auto;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3;
+}
+
+.contact-info {
+    max-width: 300px;
+    text-align: left;
+}
+
+.contact-info h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Section principale avec animation */
+.animation-display {
+    position: fixed; /* Toujours en arrière-plan */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%; /* Adapte la hauteur au contenu */
+    z-index: -1; /* Passe derrière le contenu */
+    overflow: hidden;
+}
+
+/* Fond animé */
+.cyber-space {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+/* Lignes animées */
+.line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #ff00ff, #00ffff);
+    animation: lineMove 3s infinite ease-in-out, lineColorChange 5s infinite alternate;
+}
+
+.line-1 { top: 20%; animation-delay: 1s; }
+.line-2 { top: 40%; animation-delay: 2s; }
+.line-3 { top: 60%; animation-delay: 3s; }
+
+/* Formes géométriques animées */
+.circle, .square, .triangle {
+    position: absolute;
+    background-color: transparent;
+    border: 2px solid #00ffff;
+    animation: shapeMove 5s infinite ease-in-out, shapeColorChange 5s infinite alternate;
+}
+
+/* Limite les mouvements des formes dans la fenêtre */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #00ffff;
+    top: 70%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+/* Particules lumineuses */
+.particle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff00ff;
+    border-radius: 50%;
+    animation: particleMove 3s infinite ease-in-out;
+}
+
+.particle-1 { top: 10%; left: 20%; animation-delay: 1s; }
+.particle-2 { top: 30%; left: 40%; animation-delay: 2s; }
+.particle-3 { top: 50%; left: 60%; animation-delay: 3s; }
+
+/* Animations */
+@keyframes shapeMove {
+    0% { transform: translateX(0) translateY(0); }
+    50% { transform: translateX(50vw) translateY(50vh); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes shapeColorChange {
+    0% { border-color: #00ffff; }
+    50% { border-color: #ff00ff; }
+}
+
+@keyframes particleMove {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(-50px); opacity: 0; }
+}
+
+/* Responsivité */
+@media (max-width: 1024px) {
+    .cyber-space { animation-duration: 15s; }
+    .line { height: 1px; }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+    .animation-display { height: 100vh; } /* Animation occupe toute la hauteur de l'écran mobile */
+    .particle { width: 4px; height: 4px; }
+    .project {
+        width: calc(50% - 1rem);  /* 2 projets par ligne sur les tablettes ou écrans plus petits */
+    }
+}
+
+/* Pour les très petits écrans (comme les téléphones portables très petits) */
+@media (max-width: 480px) {
+    .cyber-space { top: 0; left: 0; width: 100%; height: 100%; }
+    .project {
+        width: 100%;  /* 1 projet par ligne sur les petits écrans */
+    }
+}

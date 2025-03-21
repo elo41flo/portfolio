@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil - Portfolio Eloise Robert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h2>Portfolio<br>Eloise Robert</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="mon_parcours.html">Mon Parcours</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Vous recherchez un développeur web pour créer votre site vitrine ou e-commerce ?</h1>
+        <br>
+        <br>
+        <strong><p class="mon-paragraphe">Vous êtes au bon endroit.</p></strong>
+    </section>
+    
+    <main class="animation-display">
+        <div class="cyber-space">
+            <!-- Lignes animées -->
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+
+            <!-- Formes géométriques -->
+            <div class="circle circle-1"></div>
+            <div class="square square-1"></div>
+            <div class="triangle triangle-1"></div>
+
+            <!-- Particules lumineuses -->
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+
+            <!-- Fond dynamique -->
+            <div class="background"></div>
+        </div>
+    </main>
+        <section class="about-me">
+        <h3>Faisons connaissance !</h3>
+        <p style="color: black;">Je m'appelle Eloise Robert, j'ai 18 ans et je suis passionnée par le développement web.<br>
+        Depuis maintenant 2 ans, je me suis spécialisée dans la création de sites vitrines et de petits sites e-commerce.<br>
+        Je vous invite à me contacter si mes services vous intéressent et je vous souhaite une agréable visite de mon site.</p>
+    </section>
+
+    <section class="skills">
+        <h3>Mes compétences</h3>
+        <div class="skills-container">
+            <img src="img/html.png" alt="HTML" class="skill-img">
+            <img src="img/css-3.png" alt="CSS" class="skill-img">
+            <img src="img/js.png" alt="JavaScript" class="skill-img">
+        </div>
+        <p>html / css / JavaScript</p>
+        <div class="skills-container">
+            <img src="img/firebase.png" alt="Firebase" class="skill-img">
+            <img src="img/github.png" alt="Github" class="skill-img">
+            <img src="img/node-js.png" alt="Node js" class="skill-img">
+        </div>
+        <p>firebase / github / nodeJS</p>
+    </section>
+    <br>
+<!-- Portfolio Section -->
+<section class="portfolio">
+    <h3>Mon portfolio</h3>
+    <div class="projects-container">
+        <div class="project" onclick="openProject('projet1')">
+            <img src="img/reparfermetures.png" alt="Repar Fermetures">
+            <p>Repar Fermetures</p>
+        </div>
+        <div class="project" onclick="openProject('projet2')">
+            <img src="img/eloaimelire.png" alt="Elo aime lire">
+            <p>Elo aime lire</p>
+        </div>
+        <div class="project" onclick="openProject('projet3')">
+            <img src="img/fleurdepau.png" alt="Fleur de Pau">
+            <p>Fleur de Pau</p>
+        </div>
+    </div>
+</section>
+
+<!-- Fenêtre modale -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProject()">&times;</span>
+        <h2 id="project-title"></h2>
+        <img id="project-image" src="" alt="Image du projet">
+        <p id="project-description"></p>
+    </div>
+</div>
+
+<section class="contact">
+    <h3>Me Contacter</h3>
+    <p>Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.</p>
+
+    <div class="contact-container">
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Mes Coordonnées</h3>
+            <p><strong>Email :</strong> elo.robert41@gmail.com</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Eloise Robert. Tous droits réservés.</p>
+</footer>
+    
+<script src="index.js"></script>    
+</body>
+</html>
