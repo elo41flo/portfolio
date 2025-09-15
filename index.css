@@ -22,7 +22,7 @@ body {
 
 /* Header */
 header {
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     position: sticky;
@@ -58,23 +58,23 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #727171;
+    color: #42413d;
 }
 
 h3 {
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: 'Emblema One', sans-serif;
     text-align: center;
 }
 
 h2 {
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: 'Emblema One', sans-serif;
     text-align: center;
 }
@@ -165,12 +165,12 @@ h1, p {
 }
 
 .modal-content {
-    background-color: white;
+    background-color: rgb(128, 128, 128);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     max-width: 500px;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .modal img {
@@ -404,6 +404,10 @@ form button:hover {
 
 /* Responsive */
 @media (max-width: 1024px) {
+    nav ul {
+        flex-direction:row;
+        align-items: center;
+    }
     h1 {
         font-size: 2rem;
     }
@@ -414,8 +418,9 @@ form button:hover {
 
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction:row;
         align-items: center;
+        font-size: 15px;
     }
     .projects-container {
         flex-direction: column;
@@ -427,6 +432,11 @@ form button:hover {
 }
 
 @media (max-width: 480px) {
+    nav ul {
+        flex-direction:column;
+        align-items: center;
+        font-size: 15px;
+    }
     h1 {
         font-size: 1.8rem;
     }

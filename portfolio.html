@@ -61,6 +61,14 @@
                 <img src="img/fleurdepau.png" alt="Fleur de Pau">
                 <p>Fleur de Pau</p>
             </div>
+            <div class="project" onclick="openProject('projet4')">
+                <img src="img/encre et art.png" alt="Encre & Art">
+                <p>Encre & Art</p>
+            </div>
+            <div class="project" onclick="openProject('projet5')">
+                <img src="img/elec renov.png" alt="Elec'Rénov">
+                <p>Elec'Rénov</p>
+            </div>
         </div>
     </section>
 
@@ -87,19 +95,30 @@ const projects = {
     projet1: {
         title: "Repar Fermetures - Site Vitrine",
         image: "img/reparfermetures.png",
-        description: "Un site vitrine conçu pour Antonio, dirigeant de Repar Fermetures du 41."
+        description: "Site vitrine conçu pour Antonio, dirigeant de Repar Fermetures du 41. HTML/CSS/JS, responsive, optimisé SEO."
     },
     projet2: {
         title: "Elo aime lire - Blog",
         image: "img/eloaimelire.png",
-        description: "Un petit blog de lecture pour moi-même."
+        description: "Blog de critiques littéraires perso, full front-end, stockage des posts en localStorage."
     },
     projet3: {
         title: "Fleur de Pau - Site e-commerce",
         image: "img/fleurdepau.png",
-        description: "Site e-commerce pour une entreprise indépendante, pour des créations artisanales."
+        description: "E-shop artisanal avec panier et gestion de produits en HTML/CSS/JS côté front-end et Node.JS pour le côté back-end."
+    },
+    projet4: {
+        title: "Encre & Art - Site réalisé dans mon parcours scolaire",
+        image: "img/encre et art.png",
+        description: "Site réalisé dans le cadre de ma formation à la Fabrique Numérique du 41 avec le thème : un évènement culturel local. Réalisé avec HTML/CSS/JS."
+    },
+    projet5: {
+        title: "Elec'Rénov - Site réalisé dans mon parcours scolaire",
+        image: "img/elec renov.png",
+        description: "Site réalisé dans le cadre de ma formation à la Fabrique Numérique du 41 avec le thème : créer une présence en ligne à un artisan local. Réalisé avec HTML/CSS/JS."
     }
 };
+
 
 // Fonction pour ouvrir la modale avec les infos du projet
 function openProject(projectId) {
